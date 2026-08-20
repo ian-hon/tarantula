@@ -9,6 +9,8 @@ struct Vec3
 
     float length();
     float length_squared();
+
+    Vec2 xz();
 };
 
 struct Vec2
@@ -24,3 +26,8 @@ struct Vec2
 
     float to_angle();
 };
+
+constexpr float PI;
+
+template <typename T>
+constexpr const T &clamp(const T &v, const T &lo, const T &hi);
