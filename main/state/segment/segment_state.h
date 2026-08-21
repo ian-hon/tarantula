@@ -1,3 +1,5 @@
+#pragma once
+
 #include "../../math/math.h"
 
 class SegmentState

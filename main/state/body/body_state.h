@@ -14,6 +14,8 @@
 //         pub ground_offset : OrderedFloat<f32>, // distance from ground
 // }
 
+#pragma once
+
 #include "../leg/leg.h"
 #include "../leg/leg_state.h"
 
@@ -25,11 +27,21 @@ class BodyState
     // pub legs_mapping : BTreeMap<LegTypes, LegState>,
     // pub ground_offset : OrderedFloat<f32>, // distance from ground
 
+public:
+    BodyState(
+        float length,
+        float width,
+        float height,
+        LegState legs_mapping[LEG_COUNT],
+        float ground_offset);
+
     float length;
     float width;
     float height;
-    LegState legs_mappingLegTypes[LEG_COUNT];
+    LegState legs_mapping[LEG_COUNT];
     float ground_offset;
+
+    BodyState clone();
 };
 
 // impl From<Body> for BodyState

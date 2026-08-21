@@ -1,3 +1,5 @@
+#pragma once
+
 #include "../../math/math.h"
 
 constexpr int SEGMENT_COUNT = 3;

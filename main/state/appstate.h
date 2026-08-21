@@ -1,4 +1,7 @@
+#pragma once
+
 #include "../math/math.h"
+#include "body/body_state.h"
 
 enum GaitTypes
 {
@@ -13,6 +16,8 @@ public:
 
     // pub state : BodyState,
     // pub next_state : Option<BodyState>,
+    BodyState state;
+    BodyState next_state;
 
     // pub active_gait : GaitTypes,
     GaitTypes active_gait;

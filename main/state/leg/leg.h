@@ -1,3 +1,5 @@
+#pragma once
+
 // cpp doesnt have appropriate hashtables, so just index
 constexpr int LEG_COUNT = 6;
 

@@ -4,7 +4,7 @@
 #include "../segment/segment.h"
 #include "../segment/segment_state.h"
 
-void LegState::update(Vec3 target)
+void LegState::update(Vec3 &target)
 {
     ThreePair three_pair = construct_three_pair(
         segment_states[Coxa].distance,

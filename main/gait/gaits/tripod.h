@@ -19,12 +19,14 @@
 //         pub ellipse_width : OrderedFloat<f32>,
 // }
 
+#pragma once
+
 #include "../gait.h"
 
 class Tripod : public Gait
 {
 public:
-    static float *construct(AppState *state, long long time, Vec3 target)
+    static Vec3 *construct(AppState *state, long long time, Vec3 target)
     {
         return nullptr;
     }

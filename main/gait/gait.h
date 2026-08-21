@@ -13,13 +13,15 @@
 //     Ripple,
 // }
 
+#pragma once
+
 #include "../state/appstate.h"
 #include "../math/math.h"
 
 class Gait
 {
 public:
-    static float *construct(AppState *state, long long time, Vec3 target);
+    static Vec3 *construct(AppState *state, long long time, Vec3 &target);
 };
 
 void progress_gait(AppState state, long long time);

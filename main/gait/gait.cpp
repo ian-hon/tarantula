@@ -7,7 +7,7 @@
 void progress_gait(AppState state, long long time)
 {
     //     let target: Vec3 = state.destination.into();
-    float *targets = nullptr;
+    Vec3 *targets = nullptr;
     switch (state.active_gait)
     {
     case Tripod:
@@ -19,13 +19,15 @@ void progress_gait(AppState state, long long time)
         break;
     }
 
+    BodyState next_body_state = state.state.clone();
     if (targets)
     {
         for (int i = 0; i < LEG_COUNT; i++)
         {
-            // state.
+            next_body_state.legs_mapping[i].update(targets[i]);
         }
     }
+    state.next_state = next_body_state;
 
     //     let targets = match state.active_gait {
     //         GaitTypes::Tripod => Tripod::construct(&mut state, time.elapsed().as_millis(), &target),
