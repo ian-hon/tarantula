@@ -2,6 +2,7 @@
 
 #include "../math/math.h"
 #include "body/body_state.h"
+#include "../gait/gaits/tripod_config.h"
 
 enum GaitTypes
 {
@@ -31,6 +32,7 @@ public:
     // // configs
     // // TODO: modularise this
     // pub tripod_config : TripodConfig,
+    TripodConfig tripod_config;
 
     // // debug
     // pub show_debug : bool,
